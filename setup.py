@@ -5,7 +5,7 @@ setup(
     version='0.0.1',
     url='https://github.com/lotrekagency/cattp',
     install_requires=[],
-    description="DjRobots",
+    description="djrobots",
     long_description=open('README.rst', 'r').read(),
     license="MIT",
     author="Lotrek",
