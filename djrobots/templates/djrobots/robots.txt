@@ -1,2 +1,5 @@
+{% extends "djrobots/base-robots.txt" %}
+{% block content %}
 User-agent: *
 Disallow:
+{% endblock %}
