@@ -2,6 +2,10 @@
 
 Our internal utility to easily have robots.txt both for development and production
 
+## Install
+
+    pip install djrobots
+
 ## Usage
 
 Include djrobot urls to your URLconf and your're done!
