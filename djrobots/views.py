@@ -5,13 +5,14 @@ from django.urls import reverse
 
 def robotstxt(request):
     sitemap_view_name = getattr(settings, "DJROBOTS_SITEMAP_VIEW_NAME", None)
-    sitemap_url = None
-    context = {}
+    sitemap_url = getattr(settings, "DJROBOTS_SITEMAP_URL", None)
+
     if sitemap_view_name:
         sitemap_url = reverse(sitemap_view_name)
-        context = {
-            'sitemap_url' : sitemap_url
-        }
+
+    context = {
+        'sitemap_url' : sitemap_url
+    }
 
     if settings.DEBUG:
         return render(request, 'djrobots/robots-debug.txt', context, content_type='text/plain')
