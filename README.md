@@ -16,13 +16,17 @@ and add djrobots to your INSTALLED_APPS
 
 ## Sitemap
 
-If you want to specify the sitemap view in your robots.txt, provide the view name in the settings
+If you want to specify the sitemap urls in your robots.txt, provide the view name in the settings
 
-    DJROBOTS_SITEMAP_VIEW_NAME = 'sitemap-root'
+    DJROBOTS_SITEMAPS = 'sitemap-root'
 
-or directly an url
+DJROBOTS_SITEMAPS is a special setting, you can use an array to specify more sitemaps in your robots.txt
 
-    DJROBOTS_SITEMAP_URL = '/sitemap-index.xml'
+    DJROBOTS_SITEMAPS = ['sitemap-root', 'department-sitemap']
+
+or you can mix view names with raw urls
+
+    DJROBOTS_SITEMAPS = ['sitemap-root', 'department-sitemap', '/my-sitemap-index.xml']
 
 ## Customization
 
