@@ -4,14 +4,18 @@ from django.urls import reverse
 
 
 def robotstxt(request):
-    sitemap_view_name = getattr(settings, "DJROBOTS_SITEMAP_VIEW_NAME", None)
-    sitemap_url = None
-    context = {}
-    if sitemap_view_name:
-        sitemap_url = reverse(sitemap_view_name)
-        context = {
-            'sitemap_url' : sitemap_url
-        }
+    sitemaps = getattr(settings, "DJROBOTS_SITEMAPS", [])
+
+    if isinstance(sitemaps, str):
+        sitemaps = [sitemaps]
+    context = {
+        'sitemap_urls' : []
+    }
+    for sitemap in sitemaps:
+        try:
+            context['sitemap_urls'].append(reverse(sitemap))
+        except:
+            context['sitemap_urls'].append(sitemap)
 
     if settings.DEBUG:
         return render(request, 'djrobots/robots-debug.txt', context, content_type='text/plain')
