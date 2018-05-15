@@ -1,4 +1,5 @@
 # Djrobots
+[![Latest Version](https://img.shields.io/pypi/v/djrobots.svg)](https://pypi.python.org/pypi/djrobots/)
 
 Our internal utility to easily have robots.txt both for development and production
 
