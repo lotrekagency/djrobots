@@ -1,5 +1,5 @@
 -r requirements.txt
 
 coverage==4.5.1
-django-nose==1.4.5
+django-nose==1.4.6
 mock==2.0.0
