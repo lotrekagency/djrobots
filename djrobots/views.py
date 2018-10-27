@@ -8,13 +8,17 @@ def robotstxt(request):
 
     if isinstance(sitemaps, str):
         sitemaps = [sitemaps]
+
     context = {
         'sitemap_urls': []
     }
     for sitemap in sitemaps:
         try:
-            context['sitemap_urls'].append(request.build_absolute_uri(
-                reverse(sitemap)))
+            context['sitemap_urls'].append(
+                request.build_absolute_uri(
+                    reverse(sitemap)
+                )
+            )
         except:
             context['sitemap_urls'].append(sitemap)
 
