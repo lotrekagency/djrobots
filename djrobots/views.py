@@ -23,6 +23,12 @@ def robotstxt(request):
             context['sitemap_urls'].append(sitemap)
 
     if settings.DEBUG:
-        return render(request, 'djrobots/robots-debug.txt', context, content_type='text/plain')
+        return render(
+            request, 'djrobots/robots-debug.txt',
+            context, content_type='text/plain'
+        )
     else:
-        return render(request, 'djrobots/robots.txt', context, content_type='text/plain')
+        return render(
+            request, 'djrobots/robots.txt',
+            context, content_type='text/plain'
+        )
