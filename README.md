@@ -1,5 +1,10 @@
-# Djrobots
-[![Latest Version](https://img.shields.io/pypi/v/djrobots.svg)](https://pypi.python.org/pypi/djrobots/)
+<p align="center">
+<img src="https://raw.githubusercontent.com/lotrekagency/djrobots/master/logo.jpg">
+<br/>
+<a href="https://travis-ci.org/lotrekagency/djrobots" target="blank"><img src="https://travis-ci.org/lotrekagency/djrobots.svg?branch=master"></a>
+<a href="https://pypi.python.org/pypi/djrobots/" target="blank"><img src="https://img.shields.io/pypi/v/djrobots.svg"></a>
+<a href="https://codecov.io/gh/lotrekagency/djrobots" target="blank"><img src="https://codecov.io/gh/lotrekagency/djrobots/branch/master/graph/badge.svg"></a>
+</p>
 
 Our internal utility to easily have robots.txt both for development and production
 
