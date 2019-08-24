@@ -5,4 +5,4 @@ clean:
 	@find . -name "__pycache__" -type d | xargs rm -rf
 
 test: clean
-	@pytest --cov djrobots
+	@pytest --cov-report term-missing --cov djrobots
