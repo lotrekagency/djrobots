@@ -45,7 +45,7 @@ If you want to specify more directives you can extend default templates, robots.
     User-agent: *
     Disallow: /cgi-bin/
     Disallow: /tmp/
-    Disallow: {% url 'documents' %} 
+    Disallow: {% url 'documents' %}
 
     Host: example.com
 
@@ -54,4 +54,4 @@ If you want to specify more directives you can extend default templates, robots.
 ## Run tests
 
     $ pip install -r requirements-dev.txt
-    $ ./runtests.py --with-coverage
+    $ make test
