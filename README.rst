@@ -8,7 +8,7 @@
 .. image:: https://travis-ci.org/lotrekagency/djrobots.svg?branch=master
    :target: https://travis-ci.org/lotrekagency/djrobots
    :alt: Build Status
- 
+
 .. image:: https://codecov.io/gh/lotrekagency/djrobots/branch/master/graph/badge.svg
    :target: https://codecov.io/gh/lotrekagency/djrobots
    :alt: codecov
@@ -82,7 +82,7 @@ If you want to specify more directives you can extend default templates, robots.
    User-agent: *
    Disallow: /cgi-bin/
    Disallow: /tmp/
-   Disallow: {% url 'documents' %} 
+   Disallow: {% url 'documents' %}
 
    Host: example.com
 
@@ -95,4 +95,4 @@ Run tests
 .. code-block::
 
    $ pip install -r requirements-dev.txt
-   $ ./runtests.py --with-coverage
+   $ make test
