@@ -18,7 +18,11 @@ Include djrobots urls to your URLconf and your're done!
 
     (r'^robots\.txt$', include('djrobots.urls')),
 
-and add djrobots to your INSTALLED_APPS
+and add djrobots to your INSTALLED_APPS.
+
+If you want to disable all in your website, use in your settings
+
+    DJROBOTS_DISALLOWALL = True
 
 ## Sitemap
 
