@@ -5,6 +5,7 @@ from django.urls import reverse
 
 def robotstxt(request):
     sitemaps = getattr(settings, "DJROBOTS_SITEMAPS", [])
+    disallow_all = getattr(settings, "DJROBOTS_DISALLOWALL", False)
 
     if isinstance(sitemaps, str):
         sitemaps = [sitemaps]
@@ -22,7 +23,7 @@ def robotstxt(request):
         except:
             context['sitemap_urls'].append(sitemap)
 
-    if settings.DEBUG:
+    if settings.DEBUG or disallow_all:
         return render(
             request, 'djrobots/robots-debug.txt',
             context, content_type='text/plain'
