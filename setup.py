@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='djrobots',
-    version='0.0.6',
+    version='0.0.7',
     url='https://github.com/lotrekagency/djrobots',
     install_requires=[],
     description="djrobots",
