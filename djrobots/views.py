@@ -20,7 +20,7 @@ def robotstxt(request):
                     reverse(sitemap)
                 )
             )
-        except:
+        except: # NOQA
             context['sitemap_urls'].append(sitemap)
 
     if settings.DEBUG or disallow_all:

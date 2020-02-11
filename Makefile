@@ -5,4 +5,5 @@ clean:
 	@find . -name "__pycache__" -type d | xargs rm -rf
 
 test: clean
+	@flake8 djrobots
 	@pytest --cov-report term-missing --cov djrobots
