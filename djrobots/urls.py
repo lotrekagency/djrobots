@@ -1,7 +1,7 @@
-from django.conf.urls import url
+from django.urls import re_path
 
 from djrobots.views import robotstxt
 
 urlpatterns = [
-    url(r'^$', robotstxt, name='djrobots'),
+    re_path(r'^$', robotstxt, name='djrobots'),
 ]
